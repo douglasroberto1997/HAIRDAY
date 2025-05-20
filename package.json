@@ -1,4 +1,7 @@
 {
+  "name": "haidrday",
+  "description": "App web de agendamento de barbearia",
+  "author": "Douglas Roberto",
   "scripts": {
     "server": "json-server --watch server.json --port=3333"
   },
