@@ -20,6 +20,7 @@ module.exports = {
 
     plugins: [new htmlWepackPlugin ({
         template: path.resolve(__dirname, "index.html"),
+        favicon: path.resolve ("src", "assets", "scissors.svg"),
     })
     ],
 }
