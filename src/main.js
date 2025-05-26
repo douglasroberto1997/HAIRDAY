@@ -11,4 +11,4 @@ import "./styles/schedule.css"
 
 //JS
 import "./modules/form/submit.js"
-import"./modules/form/load.js"
+import"./modules/form/page-load.js"
