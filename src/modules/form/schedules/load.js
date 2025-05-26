@@ -9,6 +9,6 @@ export function schedulesDay() {
     const date = selectedDate.value
     
  // renderiza as horas disponiveis
-    hoursLoad({selectedDate })
+    hoursLoad({ date })
 
 }
