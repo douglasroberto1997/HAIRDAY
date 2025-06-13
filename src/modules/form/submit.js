@@ -19,35 +19,41 @@ form.onsubmit = (event) => {
  try{
 
     //recupera o nome do cliente
-    const name = clienteName.value.trim()
-    if (!name) {
-        return alert ("Informe o nome do cliente")
+    const name = clientName.value.trim()
+    
+    if(!name) {
+      return alert("Informe o nome do cliente!")
     }
 
     //recupera o horario selecionado
-    const hourSelected = documento.querySelector(".hour-selected")
+    const hourSelected = document.querySelector(".hour-selected")
+    
 
-    //recuperando horario selecionado
+    //recupera o horario selecionado
     if (!hourSelected) {
-        return alert ("Selecione a hora")
+      return alert("Selecione a hora")
     }
 
-    //recuperar somente a hora
-    const hour = hourSelected.innerText.split(":")
+
+    //recupera a hora
+    const [hour] = hourSelected.innerText.split (":")
+    
 
     //inserir a hora na data
     const when = dayjs(selectedDate.value).add(hour,"hour")
-
-    //gerando id
+    
+    //gera um ID
     const id = new Date().getTime()
 
     console.log ({
-        id,
-        name,
-        when,
+         id,
+         name,
+         when
     })
 
  } catch(error) {
+    console.log(error)
     alert ("Não foi possivel realizar o agendamento")
+
  }
 }
