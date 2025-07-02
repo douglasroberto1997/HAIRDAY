@@ -9,12 +9,12 @@ export async function schedulefetchByDay ({date}) {
         const response = await fetch(`${apiConfig.baseURL}/schedules`)
 
         //converte para json
-        const data = await PaymentResponse.json()
+        const data = await response.json()
 
         // filtra os agendamentos pelo dia selecionado
         const dailySchadules = data.filter((schedule) => dayjs (date).isSame(schedule.when,"day"))
 
-        return dailySchadules()
+        return dailySchadules
     } catch (error) {
         console.log(error);
         alert("Não foi possivel buscar os agendamentos do dia selecionado ")
