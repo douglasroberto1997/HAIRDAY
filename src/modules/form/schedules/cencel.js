@@ -1,5 +1,5 @@
-import{schedulesDay} from"./load.js"
-import { scheduleCancel } from "../../../services/schedules-cancel.js"
+import {schedulesDay} from"./load.js"
+import { scheduleCancel } from "../../../services/schedule-cancel.js"
 
 const periods = document.querySelectorAll(".period")
 
@@ -7,7 +7,7 @@ const periods = document.querySelectorAll(".period")
 periods.forEach((period) =>{
 
 //captura o evento de clique na lista
-period.addEventListener("click",async (event) =>  {
+period.addEventListener("click", async (event) =>  {
 
     if(event.target.classList.contains("calcel-icon")) {
 //obtem a li pai do elemento cliclado
